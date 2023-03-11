@@ -1,12 +1,21 @@
-import React from 'react-native';
-import { View, Text } from 'react-native';
-
-
+import React from "react-native";
+import { View } from "react-native";
+import Text from "./Text";
+import Image from "./Image";
 
 const RepositoryItem = ({ item }) => {
   return (
     <View>
-      <Text>Full name: {item.fullName}</Text>
+      <Image
+        source={{ uri: item.ownerAvatarUrl }}
+        width="list"
+        height="list"
+        borderRadius="list"
+        marginTop="list"
+      />
+      <Text fontWeight="bold" fontSize="subheading">
+        Full name: {item.fullName}
+      </Text>
       <Text>Description: {item.description}</Text>
       <Text>Language: {item.language}</Text>
       <Text>Stars: {item.stargazersCount}</Text>
