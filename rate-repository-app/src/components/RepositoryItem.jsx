@@ -98,7 +98,7 @@ const RepositoryItem = ({ item }) => {
             {item.ratingAverage}
           </Text>
 
-          <Text color="textSecondary">Rating</Text>
+          <Text color="textSecondary">Ratings</Text>
         </Layout>
       </Layout>
     </View>
