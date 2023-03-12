@@ -2,7 +2,11 @@ const theme = {
   colors: {
     textPrimary: "#24292e",
     textSecondary: "#586069",
-    primary: "#0366d6",
+    languageBackground: "#0366d6",
+    appBarBackground: "#24292e",
+    textWhite: "white",
+    mainBackground: "#e1e4e8",
+    itemBackground: "white",
   },
   fontSizes: {
     body: 14,
@@ -16,16 +20,37 @@ const theme = {
     bold: "700",
   },
   borderRadius: {
-    list: 10,
+    soft: 5,
   },
   width: {
-    listThumbnail: 50,
+    listImage: 50,
   },
   height: {
-    listThumbnail: 50,
+    listImage: 50,
+    appBar: 100,
+    itemTop: 115,
   },
-  marginTop: {
-    listThumbnailTop: 15,
+  margin: {
+    margin: 15,
+    marginTop: 12,
+    marginBottom: 12,
+  },
+  padding: {
+    language: 5,
+    appBar: 25,
+  },
+  flexDirection: {
+    row: "row",
+  },
+  alignSelf: {
+    flexStart: "flex-start",
+  },
+  justifyContent: {
+    evenly: "space-evenly",
+    around: "space-around",
+  },
+  alignItems: {
+    center: "center",
   },
 };
 
