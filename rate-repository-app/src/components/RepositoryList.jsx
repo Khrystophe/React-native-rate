@@ -10,10 +10,18 @@ const styles = StyleSheet.create({
 });
 
 const RepositoryList = () => {
-  const { repositories } = useRepositories();
+  const { data, error, loading } = useRepositories();
 
-  const repositoryNodes = repositories
-    ? repositories.edges.map((edge) => edge.node)
+  if (loading) {
+    return <View>Loading...</View>;
+  }
+
+  if (error) {
+    return <View>Error: {error.message}</View>;
+  }
+
+  const repositoryNodes = data
+    ? data.repositories.edges.map((edge) => edge.node)
     : [];
 
   const ItemSeparator = () => <View style={styles.separator} />;
