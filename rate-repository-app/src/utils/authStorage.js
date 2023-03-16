@@ -7,7 +7,7 @@ class AuthStorage {
 
   async getAccessToken() {
     const token = await AsyncStorage.getItem(`${this.namespace}:token`);
-    return token ? JSON.parse(token) : null;
+    return token ? JSON.parse(token) : [];
   }
 
   async setAccessToken(accessToken) {
