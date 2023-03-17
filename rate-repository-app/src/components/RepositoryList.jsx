@@ -1,4 +1,4 @@
-import { FlatList, View, StyleSheet } from "react-native";
+import { FlatList, View, StyleSheet, Text } from "react-native";
 import useRepositories from "../hooks/useRepositories";
 import React from "react-native";
 import RepositoryItem from "./RepositoryItem";
@@ -11,13 +11,21 @@ const styles = StyleSheet.create({
 
 const RepositoryList = () => {
   const { data, error, loading } = useRepositories();
-
+  console.log(useRepositories());
   if (loading) {
-    return <View>Loading...</View>;
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
   }
 
   if (error) {
-    return <View>Error: {error.message}</View>;
+    return (
+      <View>
+        <Text>Error: {error.message}</Text>
+      </View>
+    );
   }
 
   const repositoryNodes = data
